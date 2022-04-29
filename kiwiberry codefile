@@ -1,0 +1,91 @@
+#to login and first enter to conda environment
+ssh ra1150@premise.sr.unh.edu
+ls -ltrh
+#for copying a directory 
+cp -r source
+
+#link to Jeff files folder
+cp slurmout.file /mnt/home/watts/shared/
+
+#to view the sam files
+samtools view file.bam | less
+
+module purge
+module load anaconda/colsa
+conda activate reecha
+
+
+#transferring to premise
+sftp ra1150@premise.sr.unh.edu #from powershell
+
+
+
+#transfer of the file from laptop to premise
+put C:\Users\reech\Downloads\wetransfer_kiwi-fastqs_2022-04-21_1838.zip 
+
+#to upload the barcode file
+put C:\Users\reech\OneDrive\Desktop\GEN811\project\barcodesID.txt
+#pathway to premise account
+/mnt/home/hale/ra1150/
+
+#login to premise
+#move file to the new directory for the project
+
+#unzip the file
+unzip wetransfer_kiwi-fastqs_2022-04-21_1838.zip
+ 
+#creating a different directory called newstart
+#working from this directory
+#code for making the reference genome
+# Single-End (SE) reads:
+perl GBS-SNP-CROP-4.pl -vs /usr/local/bin/vsearch -d SE -b BarcodeID.txt -rl 150 -t 10 -cl consout -id 0.93 -db 1 -min 32 -MR GSC.MR
+
+#the genome output for the mock genome
+#GSC.MR.Genome.fa #GSC.MR.CLusters.fa #PosToMask.txt #genome.output
+#code for bwa alignment
+# Single-End (SE) reads:
+perl GBS-SNP-CROP-5.pl -bw $HOME/.conda/envs/reecha/bin/bwa -st $HOME/.conda/envs/reecha/bin/samtools -d SE -b barcodesID.txt -ref GSC.MR.Genome.fa -Q 30 -q 0 -F 2308 -f 0 -t 10 -opt "-m1 -s156"
+
+conda activate reecha
+
+# Identifying SNPs only:
+perl GBS-SNP-CROP-6.pl -b barcodesID.txt -out GSC.MasterMatrix.txt -t 10 
+
+#for output from mockreference
+# Print the positions of all putative variants called (output from Step 7)
+awk {'print $2'} GSC.GenoMatrix.txt > VarPos.txt
+# Inspect the two lists for any duplicated values (i.e. positions), which should be removed from the genotyping matrix
+sort PosToMask.txt VarPos.txt | uniq -d > MaskedPos.txt
+
+
+# created the barode text file
+# loading and copying all the script of the pipeline
+# Submitted a script to the premise but it didn't work
+# trying to figure that out
+
+#general way to work without activating reeecha conda environment
+module purge
+module load linuxbrew/colsa
+perl GBS-SNP-CROP-4.pl -pr /mnt/lustre/software/linuxbrew/colsa/bin/pear -vs /mnt/lustre/software/linuxbrew/colsa/bin/vsearch -d PE -b BARCODE.txt -rl 150 -p 0.01 -pl 32 -t 10 -cl consout -id 0.93 -db 1 -min 32 -MR GSC.MR
+
+#method to activate the own conda environment and activating the modules in the environment
+module purge
+module load anaconda/colsa
+conda create --name reecha
+conda activate reecha
+conda install perl pear vsearch=2.13.7 perl-getopt-long perl-list-util perl-list-moreutils
+conda install bwa samtools 
+conda install perl-parallel-forkmanager
+conda install bamtools
+
+
+
+vsearch --cluster_fast zcat Michigan_State_TBF.01_015.L4.R1.fq.gz vsearch.fa
+
+#sample
+module purge
+module load linuxbrew/colsa
+which pear
+which vsearch
+vsearch -v
+$HOME/.conda/envs/reecha/bin/vsearch
