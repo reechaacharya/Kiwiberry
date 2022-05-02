@@ -50,4 +50,4 @@ samtools
 ## As your job will be allocated an entire node, this should normally
 ## be 24.
 
-perl GBS-SNP-CROP-5.pl -bw /mnt/lustre/software/linuxbrew/colsa/bin/bwa -st /mnt/lustre/software/linuxbrew/colsa/bin/samtools -d SE -b barcodesID.txt -ref GSC.Genome.fa -Q 30 -q 0 -F 2308 -f 0 -t 10 -opt "-m1 "
+perl GBS-SNP-CROP-5.pl -bw /mnt/lustre/software/linuxbrew/colsa/bin/bwa -st /mnt/lustre/software/linuxbrew/colsa/bin/samtools -d SE -b barcodesID.txt -ref GSC.MR.Genome.fa -Q 30 -q 30 -F 2308 -f 0 -t 10 -opt 0
