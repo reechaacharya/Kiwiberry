@@ -25,21 +25,28 @@ Kiwiberry (Actinidia arguta) is an emerging berry crop within highly diverse Act
 3) Mock reference genome was created using the script1.sh which  clusters the reads using vsearch package
 
 **Map alignment**
-1) script2.sh was used for the alignment mapping using BWA-mem and was processed with sam tools.  **##output** - mpileup
-2) script3.sh is used in parsing the mpile up file and create variant discovery matrix.     **##output** - variant/genotype matrix
-3) script4.sh is used for the variant calling and genotype calling .    **##output** - vcf file
-4) script5.sh is used for providing description of all variants in a cluster   **## output** - descriptor.txt file
-
+1) script2.sh was used for the alignment mapping using BWA-mem and was processed with sam tools.  
+2) script3.sh is used in parsing the mpile up file and create variant discovery matrix.    
+3) script4.sh is used for the variant calling and genotype calling .    
+4) script5.sh is used for providing description of all variants in a cluster   
 
 
 
 
 
 **Findings**
-#Script1.sh output - mock reference genome
+#script1.sh output - mock reference genome
+
+
 #script2.sh output - mpileup files
+
+
 #script3.sh output - variant/genotype matrix
+
+
 #script4.sh output - vcf file
+
+
 #script5.sh output - descriptor.txt file
 
 
