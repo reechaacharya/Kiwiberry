@@ -36,7 +36,11 @@ Kiwiberry (Actinidia arguta) is an emerging berry crop within highly diverse Act
 
 
 **Findings**
-
+#Script1.sh output - mock reference genome
+#script2.sh output - mpileup files
+#script3.sh output - variant/genotype matrix
+#script4.sh output - vcf file
+#script5.sh output - descriptor.txt file
 
 
 
