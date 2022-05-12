@@ -59,6 +59,8 @@ Cluster length frequency in the VCF file  represents the number of SNPs identifi
 
 In plots/Wholecluster.png you can see that the number of SNPs in cluster length <160 bp is <1000 whereas the number of SNPs in cluster length <160bp in plots/cluster.png is around 1000-1500
 
+Histogram Plots
+https://github.com/reechaacharya/Kiwiberry/blob/63c3ae9a2c3f08e0cba73aa725876ed62353e525/plots/Wholecluster.png
 
 
 
