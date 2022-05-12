@@ -33,8 +33,9 @@ Kiwiberry (Actinidia arguta) is an emerging berry crop within highly diverse Act
 ## Descriptor file
 1) script5.sh is used for providing description of all variants in a cluster   
 
+The descriptor file was used to make histograms for cluster length frequencies.
 
-
+#### more details on the work flow and script for histogram in R is in whole_script path.txt
 
 
 # Findings 
