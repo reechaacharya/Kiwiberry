@@ -57,7 +57,7 @@ Kiwiberry (Actinidia arguta) is an emerging berry crop within highly diverse Act
 ### Differences in the cluster length frequency when using 1 read vs 10 reads for the reference genome
 Cluster length frequency in the VCF file  represents the number of SNPs identified using the built mock reference genome. The cluster length frequency varied from 50 -160 in both the situation. The cluster frequency was highest for the cluster with length 160 bp in both the cases. The number of SNPs identified using the developed cluster (160bp) in mock reference genome with 1 read (>6000) was double incomparison to the cluster (160 bp) in mock reference with 10 reads (approx 3000). 
 
-In plots/Wholecluster.png you can see that the number of SNPs in cluster length <160 bp is <1000 whereas the number of SNPs in cluster length <160bp in is around 1000-1500
+In plots/Wholecluster.png you can see that the number of SNPs in cluster length <160 bp is <1000 whereas the number of SNPs in cluster length <160bp in plots/cluster.png is around 1000-1500
 
 
 
