@@ -1,0 +1,38 @@
+whole_script path
+1) Opening of account to premise
+
+2)importing the reads file to premise account in project directory
+sftp ra1150@premise.sr.unh.edu
+put C:\Users\reech\Downloads\wetransfer_kiwi-fastqs_2022-04-21_1838.zip 
+there were 10 accessions file in the zipped file
+3)barcode text file was created for all the accessions
+4)script1.sh is used to make the mock reference genome out of the reads 
+5)two mock references were made; 1st one using all the 10 reads whereas in 2nd one only 1 read was used
+6)script2.sh was used for alignment mapping of the reads with the developed mock reference
+7)script3.sh was used for parsing the file
+8)script4.sh was used for creating the vcf file this was done within the variants directory inside the project directory
+9)script5.sh was used to create the overall summary file called descriptor file
+10) descriptor file was used to create histogram in Rstudio
+
+11)Script used in R
+for wholecluster.png
+#!/bin/R
+ data <- read.table("GSC.desc.txt")
+ data
+summary (data$V6)
+png ("wholecluster.png")
+ hist(data$V6, main = "Histogram for cluster length",xlab="cluster length", ylim = c(0, 6000), border="green", col="red")
+ dev.off()
+
+for cluster.png
+#!/bin/R
+ data <- read.table("GSC.desc.txt")
+ data
+summary (data$V6)
+png ("cluster.png")
+ hist(data$V6, main = "Histogram for cluster length",xlab="cluster length", ylim = c(0, 6000), border="blue", col="green")
+ dev.off()
+
+ 12) to download the files of histogram
+ put mnt/home/hale/ra1150/project/variants/wholecluster.png
+ put mnt/home/hale/ra1150/project/variants/cluster.png
