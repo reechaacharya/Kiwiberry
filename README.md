@@ -55,7 +55,7 @@ Kiwiberry (Actinidia arguta) is an emerging berry crop within highly diverse Act
 ### script5.sh output - descriptor.txt file
 
 ### Differences in the cluster length frequency when using 1 read vs 10 reads for the reference genome
-Cluster length frequency in the VCF file  represents the number of SNPs identified using the built mock reference genome. The cluster length frequency varied from 50 -160 in both the situation. The cluster frequency was highest for the cluster with length 160 bp in both the cases. The number of SNPs identified using the developed cluster (160bp) in mock reference genome with 1 read (>6000) was double incomparison to the cluster (160 bp) in mock reference with 10 reads (approx 3000).
+Cluster length frequency in the VCF file  represents the number of SNPs identified using the built mock reference genome. The cluster length frequency varied from 50 -160 in both the situation. The cluster frequency was highest for the cluster with length 160 bp in both the cases. The number of SNPs identified using the developed cluster (160bp) in mock reference genome with 1 read (>6000) was double incomparison to the cluster (160 bp) in mock reference with 10 reads (approx 3000). 
 
 
 
@@ -63,5 +63,8 @@ Cluster length frequency in the VCF file  represents the number of SNPs identifi
 
 # References 
 Melo et al. GBS-SNP-CROP: A reference-optional pipeline for SNP discovery and plant germplasm characterization using genotyping-by-sequencing data. BMC Bioinformatics. 2016. 17:29. DOI 10.1186/s12859-016-0879-y.
+
 Latocha, P. (2017). The Nutritional and Health Benefits of Kiwiberry (Actinidia arguta) – a Review. Plant Foods for Human Nutrition, 72(4), 325–334. https://doi.org/10.1007/s11130-017-0637-y
+
+
 Yu, X., Liu, C., Liu, Y., Tan, C., & Liu, Y. (2015). Actinidia arguta polysaccharide induces apoptosis in Hep G2 cells. Advance Journal of Food Science and Technology, 7(11), 857–863. https://doi.org/10.19026/ajfst.7.2522
